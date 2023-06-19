@@ -12,8 +12,10 @@ import ProtectedRoute from './Layouts/ProtectedRoute';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
+import Page_404 from './Pages/Page_404';
 
 import { authLoader } from './loaders/authLoader';
+import Colection from './Pages/Colection';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -26,14 +28,14 @@ const router = createBrowserRouter(createRoutesFromElements(
 
       <Route
         path="login"
-        element={<Login />}
         loader={authLoader}
+        element={<Login />}
       />
 
       <Route
         path="register"
-        element={<SignUp />}
         loader={authLoader}
+        element={<SignUp />}
       />
     </Route>
 
@@ -44,10 +46,15 @@ const router = createBrowserRouter(createRoutesFromElements(
           path="home"
           element={<Home />}
         />
+        <Route
+          index
+          path="colection"
+          element={<Colection />}
+        />
       </Route>
     </Route>
 
-    {/* <Route path="*" element={<Page_404 />} /> */}
+    <Route path="*" element={<Page_404 />} />
   </>
 ));
 
