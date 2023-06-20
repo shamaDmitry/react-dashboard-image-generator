@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         "dark": "#1E2235",
+        "dark-lvl-3": "#252A41",
         "dark-bg": "#1A1D2D",
       },
     },

@@ -1,5 +1,4 @@
-import React from 'react';
-import { redirect, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { LOCAL_STORAGE_TOKEN_NAME } from '../config';
 
 const Login = () => {

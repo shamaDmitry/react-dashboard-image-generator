@@ -1,9 +1,8 @@
-import React from 'react';
-import { darkModeAtom } from '../atoms/darkModeAtom';
+import { darkModeAtom } from '../../atoms/darkModeAtom';
 import { useAtom } from 'jotai';
 
-import Moon from '../assets/icons/Moon';
-import Sun from '../assets/icons/Sun';
+import Moon from '../../assets/icons/Moon';
+import Sun from '../../assets/icons/Sun';
 import classNames from 'classnames';
 
 const ModeToggle = () => {
@@ -12,7 +11,7 @@ const ModeToggle = () => {
   return (
     <div
       className={classNames("flex border-[2px] rounded-[12px] h-[52px]", {
-        "border-[#252A41]": darkMode
+        "border-dark-lvl-3": darkMode
       })}
     >
       <input
@@ -26,7 +25,7 @@ const ModeToggle = () => {
       <label
         htmlFor="dark-mode"
         className={classNames(`transition-all cursor-pointer flex items-center justify-center flex-1 rounded-[12px] gap-2`, {
-          "bg-[#252A41]": darkMode
+          "bg-dark-lvl-3": darkMode
         })}
       >
 

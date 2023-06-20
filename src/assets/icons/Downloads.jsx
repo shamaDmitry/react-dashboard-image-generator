@@ -1,8 +1,7 @@
-import React from 'react';
-
-const Downloads = ({ color = "#9CA3AF" }) => {
+const Downloads = (props) => {
   return (
     <svg
+      {...props}
       width={24}
       height={24}
       viewBox="0 0 24 24"
@@ -11,21 +10,21 @@ const Downloads = ({ color = "#9CA3AF" }) => {
     >
       <path
         d="M9 11V17M9 17L11 15M9 17L7 15"
-        stroke={color}
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
-        stroke={color}
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M22 10H18C15 10 14 9 14 6V2L22 10Z"
-        stroke={color}
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

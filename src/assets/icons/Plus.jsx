@@ -1,8 +1,7 @@
-import React from 'react';
-
-const Plus = ({ color = "#9CA3AF" }) => {
+const Plus = (props) => {
   return (
     <svg
+      {...props}
       width={20}
       height={20}
       viewBox="0 0 20 20"
@@ -11,7 +10,7 @@ const Plus = ({ color = "#9CA3AF" }) => {
     >
       <path
         d="M5 10H15M10 15V5"
-        stroke={color}
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

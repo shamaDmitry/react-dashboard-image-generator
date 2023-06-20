@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 
 const Button = ({ type = "primary", label, icon, fullWidth, onClick, className }) => {
   return (

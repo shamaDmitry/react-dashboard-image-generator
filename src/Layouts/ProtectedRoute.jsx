@@ -1,4 +1,3 @@
-import React from "react"
 import { Outlet, Navigate, useLocation } from "react-router-dom"
 import { LOCAL_STORAGE_TOKEN_NAME } from "../config";
 
