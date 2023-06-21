@@ -1,7 +1,9 @@
 const Colection = () => {
   return (
     <div>
-      Colection
+      <h1>
+        Colection
+      </h1>
     </div>
   );
 }
