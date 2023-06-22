@@ -6,45 +6,38 @@ import classNames from 'classnames';
 import { useAtom } from 'jotai';
 import { darkModeAtom } from '../../atoms/darkModeAtom';
 
-// icons
 import DynamicIcon from '../../assets/icons/_DynamicIcon';
-import Home from '../../assets/icons/Home';
-import Collection from '../../assets/icons/Collection';
-import Downloads from '../../assets/icons/Downloads';
-import Chat from '../../assets/icons/Chat';
-import Clock from '../../assets/icons/Clock';
-import Settings from '../../assets/icons/Settings';
 
 const menu = [
   {
     "title": "Home",
     "to": "/home",
-    "icon": <Home />,
+    "icon": "home",
   },
   {
-    "title": "Colection",
-    "to": "/colection",
-    "icon": <Collection />,
+    "title": "Collection",
+    "to": "/collection",
+    "icon": "collection",
   },
   {
     "title": "Downloads",
     "to": "/downloads",
-    "icon": <Downloads />,
+    "icon": "downloads",
   },
   {
     "title": "Chat",
     "to": "/chat",
-    "icon": <Chat />,
+    "icon": "chat",
   },
   {
     "title": "History",
     "to": "/history",
-    "icon": <Clock />,
+    "icon": "clock",
   },
   {
     "title": "Settings",
     "to": "/settings",
-    "icon": <Settings />,
+    "icon": "settings",
   },
 ];
 
@@ -81,7 +74,7 @@ const Sidebar = ({ className }) => {
                 <>
                   <span>
                     <DynamicIcon
-                      icon={item.icon}
+                      name={item.icon}
                       className={classNames('font-semibold text-base', {
                         "text-black": isActive && !darkMode,
                         "text-white": isActive && darkMode,
@@ -107,7 +100,8 @@ const Sidebar = ({ className }) => {
         className={classNames('flex items-center gap-4 rounded-[12px] py-3 px-4 text-gray-400 border-none hover:underline')}
         onClick={handleLogOut}
       >
-        <Clock
+        <DynamicIcon
+          name="clock"
           className={classNames('font-semibold text-base')}
         />
 

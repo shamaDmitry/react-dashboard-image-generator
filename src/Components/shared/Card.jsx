@@ -31,13 +31,11 @@ const Card = ({ media, author, stats }) => {
             stats.map(stat => {
               return (
                 <Stats
+                  key={stat.id}
                   icon={
                     <DynamicIcon
-                      icon={stat.icon}
-                      className={classNames('font-semibold text-base', {
-                        // "text-black": isActive && !darkMode,
-                        // "text-white": isActive && darkMode,
-                      })}
+                      name={stat.icon}
+                      className={classNames('font-semibold text-base', {})}
                     />
                   }
                   count={stat.count}

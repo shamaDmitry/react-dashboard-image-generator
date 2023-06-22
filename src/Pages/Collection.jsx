@@ -1,4 +1,4 @@
-const Colection = () => {
+const Collection = () => {
   return (
     <div>
       <h1>
@@ -8,4 +8,4 @@ const Colection = () => {
   );
 }
 
-export default Colection;
+export default Collection;

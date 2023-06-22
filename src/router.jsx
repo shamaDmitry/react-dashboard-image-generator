@@ -15,7 +15,7 @@ import SignUp from './Pages/SignUp';
 import Page_404 from './Pages/Page_404';
 
 import { authLoader } from './loaders/authLoader';
-import Colection from './Pages/Colection';
+import Collection from './Pages/Collection';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -48,8 +48,8 @@ const router = createBrowserRouter(createRoutesFromElements(
         />
         <Route
           index
-          path="colection"
-          element={<Colection />}
+          path="collection"
+          element={<Collection />}
         />
       </Route>
     </Route>

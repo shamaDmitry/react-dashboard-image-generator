@@ -8,8 +8,9 @@ import UserNotificationCenter from "../Components/shared/user/UserNotificationCe
 import Tag from "../Components/base/Tag";
 import Card from "../Components/shared/Card";
 
-import Heart from "../assets/icons/Heart";
-import OpenEye from "../assets/icons/OpenEye";
+import MediaFilter from "../Components/base/MediaFilter";
+
+import cardsData from "../data/cards.json";
 
 const Home = () => {
   const [darkMode,] = useAtom(darkModeAtom);
@@ -52,84 +53,23 @@ const Home = () => {
         </div>
 
         <div>
-          <select name="" id="">
-            <option value="">filter</option>
-          </select>
+          <MediaFilter></MediaFilter>
         </div>
       </div>
 
       <div className="grid grid-cols-4 gap-6">
-        <Card
-          media="https://placeimg.com/250/480/any"
-          author={{
-            "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
-            "name": "Nicholsdsas Turner",
-          }}
-          stats={[
-            {
-              "icon": <Heart />,
-              "count": 24,
-            },
-            {
-              "icon": <OpenEye />,
-              "count": 224,
-            },
-          ]}
-        />
-
-        <Card
-          media="https://placeimg.com/250/480/any"
-          author={{
-            "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
-            "name": "Nicholsdsas Turner",
-          }}
-          stats={[
-            {
-              "icon": <Heart />,
-              "count": 24,
-            },
-            {
-              "icon": <OpenEye />,
-              "count": 224,
-            },
-          ]}
-        />
-
-        <Card
-          media="https://placeimg.com/250/480/any"
-          author={{
-            "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
-            "name": "Nicholsdsas Turner",
-          }}
-          stats={[
-            {
-              "icon": <Heart />,
-              "count": 24,
-            },
-            {
-              "icon": <OpenEye />,
-              "count": 224,
-            },
-          ]}
-        />
-
-        <Card
-          media="https://placeimg.com/250/480/any"
-          author={{
-            "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
-            "name": "Nicholsdsas Turner",
-          }}
-          stats={[
-            {
-              "icon": <Heart />,
-              "count": 24,
-            },
-            {
-              "icon": <OpenEye />,
-              "count": 224,
-            },
-          ]}
-        />
+        {
+          cardsData.map(card => {
+            return (
+              <Card
+                key={card.id}
+                media={card.media}
+                author={card.author}
+                stats={card.stats}
+              />
+            )
+          })
+        }
       </div>
     </section>
   );
