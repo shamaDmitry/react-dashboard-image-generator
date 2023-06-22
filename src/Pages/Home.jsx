@@ -11,15 +11,22 @@ import Card from "../Components/shared/Card";
 import MediaFilter from "../Components/base/MediaFilter";
 
 import cardsData from "../data/cards.json";
+import classNames from "classnames";
 
 const Home = () => {
   const [darkMode,] = useAtom(darkModeAtom);
+
+  const handleFilterChange = (filterName) => {
+    console.log('filterName', filterName);
+  }
 
   return (
     <section className="flex flex-col w-full">
       <div className="flex w-full">
         <div>
-          <SearchInput />
+          <SearchInput
+            darkMode={darkMode}
+          />
         </div>
 
         <div className="flex gap-4 ml-auto">
@@ -27,14 +34,20 @@ const Home = () => {
             avatar="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100"
             name="Nicholsdsas Turner"
             company="SaaS Blocks LLC"
+            darkMode={darkMode}
           />
 
-          <UserNotificationCenter />
+          <UserNotificationCenter
+            darkMode={darkMode}
+          />
         </div>
       </div>
 
       <Divider
-        className="h-[1px] w-full bg-gray-300 my-8"
+        className={classNames("h-[1px] w-full  my-8", {
+          "bg-gray-300": !darkMode,
+          "bg-gray-700": darkMode,
+        })}
       />
 
       <div className="flex justify-between mb-4">
@@ -52,8 +65,12 @@ const Home = () => {
           />
         </div>
 
-        <div>
-          <MediaFilter></MediaFilter>
+        <div className="flex w-full max-w-[260px]">
+          <MediaFilter
+            onChange={handleFilterChange}
+            darkMode={darkMode}
+            menu={[]}
+          />
         </div>
       </div>
 
@@ -66,6 +83,7 @@ const Home = () => {
                 media={card.media}
                 author={card.author}
                 stats={card.stats}
+                darkMode={darkMode}
               />
             )
           })

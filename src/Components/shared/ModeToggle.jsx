@@ -1,9 +1,8 @@
 import { darkModeAtom } from '../../atoms/darkModeAtom';
 import { useAtom } from 'jotai';
 
-import Moon from '../../assets/icons/Moon';
-import Sun from '../../assets/icons/Sun';
 import classNames from 'classnames';
+import DynamicIcon from '../../assets/icons/_DynamicIcon';
 
 const ModeToggle = () => {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom);
@@ -29,7 +28,12 @@ const ModeToggle = () => {
         })}
       >
 
-        <Moon color={!darkMode ? "#9CA3AF" : "#fff"} />
+        <DynamicIcon
+          name="moon"
+          className={classNames({
+            "text-gray-400 ": !darkMode
+          })}
+        />
 
         <span
           className={classNames(`font-semibold text-lg capitalize`, {
@@ -51,11 +55,16 @@ const ModeToggle = () => {
       <label
         htmlFor="light-mode"
         className={classNames(`transition-all cursor-pointer flex items-center justify-center flex-1 rounded-[12px] gap-2`, {
-          "bg-gray-300": !darkMode
+          "bg-gray-300": !darkMode,
+          "opacity-30": darkMode
         })}
       >
-        <Sun color={!darkMode ? "#000" : "#fff"} />
-
+        <DynamicIcon
+          name="sun"
+          className={classNames({
+            "text-black ": !darkMode
+          })}
+        />
         <span
           className={classNames(`font-semibold text-lg capitalize`, {
             "text-black ": !darkMode

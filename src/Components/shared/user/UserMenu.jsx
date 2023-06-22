@@ -1,10 +1,10 @@
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import React, { Fragment } from 'react';
-import ArrowDown from '../../../assets/icons/ArrowDown';
+import DynamicIcon from '../../../assets/icons/_DynamicIcon';
 import UserRow from '../../base/UserRow';
 
-const UserMenu = ({ avatar, name, company }) => {
+const UserMenu = ({ avatar, name, company, darkMode }) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Menu.Button
@@ -14,8 +14,13 @@ const UserMenu = ({ avatar, name, company }) => {
           avatar={avatar}
           name={name}
           company={company}
+          darkMode={darkMode}
         />
-        <ArrowDown className="w-4 ml-2" />
+
+        <DynamicIcon
+          name="arrowDown"
+          className="w-4 ml-2"
+        />
       </Menu.Button>
 
       <Transition
