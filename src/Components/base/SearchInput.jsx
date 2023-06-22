@@ -14,8 +14,9 @@ const SearchInput = ({ darkMode }) => {
       </div>
 
       <input
-        className={classNames("rounded-large border-[2px] border-gray-400 pl-[44px] py-3 pr-3", {
-          "text-white bg-transparent border-gray-700": darkMode
+        className={classNames("rounded-large border-[2px]  pl-[44px] py-3 pr-3", {
+          "bg-white border-gray-400": !darkMode,
+          "text-white bg-transparent border-gray-700": darkMode,
         })}
         type="text"
         placeholder="Search"
