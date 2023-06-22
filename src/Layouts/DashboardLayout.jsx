@@ -14,7 +14,7 @@ const NavbarLayout = () => {
       />
 
       <main
-        className={classNames("w-full px-[72px] py-[32px] relative ml-[264px]", {
+        className={classNames("w-full px-6 py-6 lg:px-[72px] lg:py-[32px] relative lg:ml-[var(--aside-width)]", {
           "bg-dark-bg text-gray-50": darkMode,
           "bg-white text-gray-900": !darkMode,
         })}

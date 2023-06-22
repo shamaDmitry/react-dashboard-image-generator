@@ -6,12 +6,12 @@ import Logo from '../base/Logo';
 import ModeToggle from './ModeToggle';
 import SidebarMenu from './SidebarMenu';
 
-import Clock from '../../assets/icons/Clock';
+import DynamicIcon from '../../assets/icons/_DynamicIcon';
 
 const Aside = ({ darkMode }) => {
   return (
     <aside
-      className={classNames('px-3 py-8 flex flex-col justify-start fixed left-0 top-0 h-full z-10 w-[265px]', {
+      className={classNames(`transition-all px-3 py-8 flex flex-col justify-start fixed lg:left-0 -left-[var(--aside-width)] top-0 h-full z-10 w-[var(--aside-width)]`, {
         'bg-gray-100': !darkMode,
         'bg-dark text-white': darkMode,
       })}
@@ -28,7 +28,7 @@ const Aside = ({ darkMode }) => {
         label="Create"
         type="primary"
         fullWidth
-        icon={<Clock color="#fff" />}
+        icon={<DynamicIcon name="clock" className={classNames("text-white")} />}
       />
 
       <SidebarMenu className="mb-6"></SidebarMenu>

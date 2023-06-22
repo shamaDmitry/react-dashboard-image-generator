@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <section className="flex flex-col w-full">
       <div className="flex w-full">
-        <div>
+        <div className="hidden lg:flex"> 
           <SearchInput
             darkMode={darkMode}
           />
@@ -50,6 +50,18 @@ const Home = () => {
         })}
       />
 
+      <div className="lg:hidden flex gap-6 mb-6">
+        <SearchInput
+          darkMode={darkMode}
+        />
+
+        <MediaFilter
+          onChange={handleFilterChange}
+          darkMode={darkMode}
+          menu={[]}
+        />
+      </div>
+
       <div className="flex justify-between mb-4">
         <div className="flex flex-wrap gap-4">
           <Tag
@@ -65,7 +77,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex w-full max-w-[260px]">
+        <div className="w-full hidden lg:flex max-w-[260px]">
           <MediaFilter
             onChange={handleFilterChange}
             darkMode={darkMode}
