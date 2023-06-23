@@ -2,12 +2,14 @@ import ArrowDown from "./ArrowDown";
 import Bell from "./Bell";
 import Chat from "./Chat";
 import Clock from "./Clock";
+import Close from "./Close";
 import Collection from "./Collection";
 import Downloads from "./Downloads";
 import Filter from "./Filter";
 import Heart from "./Heart";
 import Home from "./Home";
 import Logout from "./Logout";
+import Menu from "./Menu";
 import Moon from "./Moon";
 import OpenEye from "./OpenEye";
 import Plus from "./Plus";
@@ -34,6 +36,8 @@ const iconTypes = {
   settings: Settings,
   star: Star,
   sun: Sun,
+  menu: Menu,
+  close: Close,
 };
 
 const DynamicIcon = ({ name, ...props }) => {

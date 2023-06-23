@@ -1,17 +1,15 @@
+import classNames from "classnames";
 import { useAtom } from "jotai";
 import { darkModeAtom } from "../atoms/darkModeAtom";
 
 import Divider from "../Components/base/Divider";
 import SearchInput from "../Components/base/SearchInput";
-import UserMenu from "../Components/shared/user/UserMenu";
-import UserNotificationCenter from "../Components/shared/user/UserNotificationCenter";
 import Tag from "../Components/base/Tag";
 import Card from "../Components/shared/Card";
-
 import MediaFilter from "../Components/base/MediaFilter";
 
 import cardsData from "../data/cards.json";
-import classNames from "classnames";
+import TopNav from "../Components/shared/TopNav";
 
 const Home = () => {
   const [darkMode,] = useAtom(darkModeAtom);
@@ -22,26 +20,9 @@ const Home = () => {
 
   return (
     <section className="flex flex-col w-full">
-      <div className="flex w-full">
-        <div className="hidden lg:flex"> 
-          <SearchInput
-            darkMode={darkMode}
-          />
-        </div>
-
-        <div className="flex gap-4 ml-auto">
-          <UserMenu
-            avatar="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100"
-            name="Nicholsdsas Turner"
-            company="SaaS Blocks LLC"
-            darkMode={darkMode}
-          />
-
-          <UserNotificationCenter
-            darkMode={darkMode}
-          />
-        </div>
-      </div>
+      <TopNav
+        darkMode={darkMode}
+      />
 
       <Divider
         className={classNames("h-[1px] w-full  my-8", {
@@ -86,7 +67,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
         {
           cardsData.map(card => {
             return (

@@ -3,8 +3,6 @@ import React from 'react';
 import Stats from '../base/Stats';
 import UserRow from '../base/UserRow';
 
-import Heart from '../../assets/icons/Heart';
-import OpenEye from '../../assets/icons/OpenEye';
 import DynamicIcon from '../../assets/icons/_DynamicIcon';
 import classNames from 'classnames';
 
@@ -25,14 +23,14 @@ const Card = ({ media, author, stats, darkMode }) => {
         />
       </div>
 
-      <div className="flex gap-4">
+      <div className="grid grid-cols-2 gap-4">
         <UserRow
           avatar={avatar}
           name={name}
           darkMode={darkMode}
         />
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 justify-end">
           {
             stats.map(stat => {
               return (

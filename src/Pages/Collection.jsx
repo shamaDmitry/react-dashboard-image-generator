@@ -1,10 +1,16 @@
+import { useAtom } from "jotai";
+import { darkModeAtom } from "../atoms/darkModeAtom";
+import TopNav from "../Components/shared/TopNav";
+
 const Collection = () => {
+  const [darkMode,] = useAtom(darkModeAtom);
+
   return (
-    <div>
-      <h1>
-        Colection
-      </h1>
-    </div>
+    <section className="flex flex-col w-full">
+      <TopNav
+        darkMode={darkMode}
+      />
+    </section>
   );
 }
 

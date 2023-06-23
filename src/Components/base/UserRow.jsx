@@ -11,15 +11,15 @@ const UserRow = ({ avatar, name, company, darkMode }) => {
         />
       </div>
 
-      <div className="flex flex-col items-start ml-4">
-        <p className={classNames("text-sm font-semibold whitespace-nowrap", {
+      <div className="flex flex-col items-start ml-4 overflow-hidden">
+        <p className={classNames("text-sm font-semibold whitespace-nowrap text-ellipsis max-w-full overflow-hidden", {
           "text-gray-900": !darkMode,
           "text-gray-50": darkMode
         })}>
           {name}
         </p>
 
-        {company && <span className={classNames("text-sm font-semibold whitespace-nowrap", {
+        {company && <span className={classNames("text-sm font-semibold whitespace-nowrap text-ellipsis max-w-full overflow-hidden", {
           "text-gray-500": !darkMode,
           "text-gray-400": darkMode,
         })}>

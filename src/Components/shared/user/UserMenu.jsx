@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import classNames from 'classnames';
 import React, { Fragment } from 'react';
 import DynamicIcon from '../../../assets/icons/_DynamicIcon';
 import UserRow from '../../base/UserRow';
@@ -10,17 +11,28 @@ const UserMenu = ({ avatar, name, company, darkMode }) => {
       <Menu.Button
         className="flex items-center"
       >
-        <UserRow
-          avatar={avatar}
-          name={name}
-          company={company}
-          darkMode={darkMode}
-        />
+        {
+          ({ open }) => {
+            return (
+              <>
+                <UserRow
+                  avatar={avatar}
+                  name={name}
+                  company={company}
+                  darkMode={darkMode}
+                />
 
-        <DynamicIcon
-          name="arrowDown"
-          className="w-4 ml-2"
-        />
+                <DynamicIcon
+                  name="arrowDown"
+                  className={classNames("w-4 ml-2 transition-all", {
+                    "rotate-180": open
+                  })}
+                />
+              </>
+            )
+          }
+        }
+
       </Menu.Button>
 
       <Transition

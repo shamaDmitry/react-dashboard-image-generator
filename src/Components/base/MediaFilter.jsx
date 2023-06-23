@@ -29,7 +29,7 @@ const MediaFilter = ({ onChange, darkMode }) => {
     >
       <div className="relative">
         <Listbox.Button
-          className={classNames("relative flex items-center w-full cursor-pointer rounded-lg py-2 pl-3 pr-10 text-left border-2", {
+          className={classNames("relative flex items-center w-full cursor-pointer rounded-large py-3 pl-3 pr-10 text-left border-2", {
             "border-gray-400": !darkMode,
           })}
         >
