@@ -10,13 +10,18 @@ import MediaFilter from "../Components/base/MediaFilter";
 
 import cardsData from "../data/cards.json";
 import TopNav from "../Components/shared/TopNav";
+import { useState } from "react";
 
 const Home = () => {
   const [darkMode,] = useAtom(darkModeAtom);
+  const [filterName, setFilterName] = useState(null);
 
   const handleFilterChange = (filterName) => {
-    console.log('filterName', filterName);
+    // console.log('filterName', filterName);
+    setFilterName(filterName);
   }
+
+  console.log(filterName);
 
   return (
     <section className="flex flex-col w-full">
@@ -69,7 +74,7 @@ const Home = () => {
 
       <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
         {
-          cardsData.map(card => {
+          cardsData.filter(card => card.views?.count > 0).filter(card => card.likes.count > 0).map(card => {
             return (
               <Card
                 key={card.id}

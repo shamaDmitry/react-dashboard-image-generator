@@ -6,16 +6,52 @@
       "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
       "name": "Nicholsdsas Turner"
     },
+    "views": {
+      "count": 4,
+      "icon": "openEye"
+    },
+    "likes": {
+      "count": 4,
+      "icon": "heart"
+    },
     "stats": [
       {
         "id": 1,
         "icon": "heart",
-        "count": 24
+        "count": 4
       },
       {
         "id": 2,
         "icon": "openEye",
-        "count": 224
+        "count": 4
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "media": "https://placeimg.com/250/480/any",
+    "author": {
+      "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=100",
+      "name": "Nicholsdsas Turner"
+    },
+    "views": {
+      "count": 14,
+      "icon": "openEye"
+    },
+    "likes": {
+      "count": 25,
+      "icon": "heart"
+    },
+    "stats": [
+      {
+        "id": 1,
+        "icon": "heart",
+        "count": 25
+      },
+      {
+        "id": 2,
+        "icon": "openEye",
+        "count": 14
       }
     ]
   },
@@ -30,12 +66,12 @@
       {
         "id": 1,
         "icon": "heart",
-        "count": 24
+        "count": 2
       },
       {
         "id": 2,
         "icon": "openEye",
-        "count": 224
+        "count": 2
       }
     ]
   },
@@ -70,12 +106,12 @@
       {
         "id": 1,
         "icon": "heart",
-        "count": 24
+        "count": 11
       },
       {
         "id": 2,
         "icon": "openEye",
-        "count": 224
+        "count": 22
       }
     ]
   },
@@ -150,12 +186,12 @@
       {
         "id": 1,
         "icon": "heart",
-        "count": 24
+        "count": 2442
       },
       {
         "id": 2,
         "icon": "openEye",
-        "count": 224
+        "count": 222
       }
     ]
   }
