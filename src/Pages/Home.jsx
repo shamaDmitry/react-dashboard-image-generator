@@ -36,7 +36,7 @@ const Home = () => {
         })}
       />
 
-      <div className="lg:hidden flex gap-6 mb-6">
+      <div className="flex gap-6 mb-6 lg:hidden">
         <SearchInput
           darkMode={darkMode}
         />
@@ -72,9 +72,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
         {
-          cardsData.filter(card => card.views?.count > 0).filter(card => card.likes.count > 0).map(card => {
+          cardsData.map(card => {
             return (
               <Card
                 key={card.id}

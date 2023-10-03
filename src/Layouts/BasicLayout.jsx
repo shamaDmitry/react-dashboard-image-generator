@@ -2,8 +2,8 @@ import { Outlet } from 'react-router-dom';
 
 const BasicLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="container mx-auto py-3 relative bg-red-500">
+    <div className="flex flex-col min-h-screen">
+      <main className="container relative py-3 mx-auto">
         <Outlet />
       </main>
     </div>

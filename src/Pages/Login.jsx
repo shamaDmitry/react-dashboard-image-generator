@@ -16,7 +16,7 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center gap-4 p-5'>
       {
         location.state?.message && <p className="text-white">
           {location.state?.message}
@@ -28,7 +28,7 @@ const Login = () => {
       </h1>
 
       <button
-        className="border p-2"
+        className="p-2 border"
         onClick={handleLogin}
       >
         go login
